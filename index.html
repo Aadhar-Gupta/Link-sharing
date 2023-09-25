@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="Preview" class="tabcontent">
+            <div class="containerPre">
+                <div class="topbg">
+                    <div class="bar">
+                        <button id="back">Back to Editor</button>
+                        <button>Share Links </button>
+                    </div>
+                </div>
+                <div class="templateP">
+                    <div class="pic"><img id="dp" src="#" alt=""></div>
+                    <p id="name">fdgnmd</p>
+                    <p id="mail">dtntfj</p>
+                    <ul  class="list" id="btn-ul" >
+                        
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="head">
+            <div class="logo">
+                <a style="text-decoration: none;" href="">
+                    <img width="100px" src="v1091-05.jpg" alt="">
+                    <p style="color: black;">DevLinks</p>
+                </a>
+            </div>
+            <div class="tab">
+                <div class="left">
+                    <button id="link" class="tablinks" onclick="openCity(event, 'Links')">Links</button>
+                    <button id="pro" class="tablinks" onclick="openCity(event, 'Profile')">Profile Details</button>
+                </div>
+                <div class="right">
+                    <button id="pre" class="tablinks" onclick="openCity(event, 'Preview')">Preview</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sidebar">
+                <div class="mockup" style="display: flex; justify-content: center;">
+                    <button style="display: none;" class="btn0">youtube</button>
+                    <button style="display: none;" class="btn1">twitter</button>
+                    <button style="display: none;" class="btn2">twitter</button>
+                    <button style="display: none; background-color: black; " class="btn3">twitter</button>
+                    <img id="place" src="#" alt="profile pic">
+                    <img src="phone_035 [Converted].png" alt="">
+                </div>
+            </div>
+            <div class="main">
+                <div id="Links" class="tabcontent">
+                    <h3>Add Custom Links</h3>
+                    <p>Add/edit/remove links bellow and then share all you profiles with the world!</p>
+                    <div class="content-link">
+                        <button onclick="Makelist()" class="addLink">+ Add new link</button>
+                        <ul id="target">
+                        </ul>
+                    </div>
+                </div>
+                <div id="Profile" class="tabcontent">
+                    <div class="content-profile">
+                        <h3>Profile Details</h3>
+                        <p>Add your details to create a personal touch to your profile.</p>
+                        <p class="pro-text">Profile Picture</p>
+                        <div class="img-container">
+                            <label id="fileButton" for="bannerImg">Select Image</label>
+                            <input class="custom-file-input" type="file" id="bannerImg" accept=".jpg, .jpeg, .png"
+                                max-width="1024" max-height="1024">
+                            <p id="errorMessage" style="color: red;"></p>
+                            <img src="" id="tableBanner" alt="Image Preview"
+                                style="max-width: 200px; max-height: 200px;">
+                            <button class="del" onclick="del()">delete image</button>
+                        </div>
+                        <div class="details">
+                            <label for="fName">First Name</label>
+                            <input type="text" id="fName">
+                            <label for="lName">Last Name</label>
+                            <input type="text" id="lName">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email">
+                        </div>
+                    </div>
+                </div>
+                <div id="Preview" class="tabcontent">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
+                <input type="submit" class="save" value="save">
+                <!-- <button class="save">save</button> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./app.js"></script>
+
+<script>
+    document.getElementById("link").click();
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+
+
+</script>
+
+</html>
